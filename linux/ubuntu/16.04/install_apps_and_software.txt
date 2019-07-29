@@ -1,3 +1,14 @@
 1. Purpose: install native postman
 	Command: sudo snap install postman
-_____________________________________
+______________________________________________
+
+2. Purpose: Fix Ubuntu Freezing Randomly
+	Original Source: https://askubuntu.com/questions/761706/ubuntu-15-10-and-16-04-keep-freezing-randomly 
+	Steps:
+		A. sudo nano /etc/default/grub
+		B. There is a line in that: GRUB_CMDLINE_LINUX_DEFAULT="quiet splash" (like this), replace with: GRUB_CMDLINE_LINUX_DEFAULT="quiet splash intel_idle.max_cstate=1"
+		C. Save it (CTRL+O)
+		D. sudo update-grub
+		E. sudo reboot
+
+______________________________________________
